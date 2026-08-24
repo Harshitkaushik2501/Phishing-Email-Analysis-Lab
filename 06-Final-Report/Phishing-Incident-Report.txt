@@ -1,1 +1,129 @@
+PHISHING EMAIL INCIDENT REPORT
 
+1. INCIDENT OVERVIEW
+
+Incident Type:
+Phishing Email
+
+Severity:
+Medium
+
+Verdict:
+Malicious / Phishing
+
+Confidence:
+High
+
+Summary:
+
+A user reported a suspicious email impersonating Microsoft Security. The
+email attempted to create urgency and direct the recipient to a suspicious
+account verification URL.
+
+2. EMAIL DETAILS
+
+Sender:
+security-alert@micros0ft-support.com
+
+Reply-To:
+security-verification@micros0ft-support.com
+
+Subject:
+URGENT: Unusual Sign-In Activity Detected
+
+Suspicious Domain:
+micros0ft-support.com
+
+Suspicious URL:
+https://micros0ft-support.com/verify
+
+3. INVESTIGATION FINDINGS
+
+Sender Analysis:
+The sender domain is a Microsoft lookalike domain. The domain uses "micros0ft"
+with the number "0" replacing the letter "o".
+
+Header Analysis:
+SPF: FAIL
+DKIM: NONE
+DMARC: FAIL
+
+These results indicate that the email failed important sender authentication
+checks.
+
+URL Analysis:
+The URL uses the same lookalike domain and contains a "/verify" path that
+could be used for credential harvesting.
+
+Threat Intelligence:
+VirusTotal reported 0/92 detections for the domain.
+
+The absence of threat-intelligence detections does not prove that the domain
+is legitimate. The domain remains suspicious based on the other indicators.
+
+4. PHISHING INDICATORS
+
+- Microsoft brand impersonation
+- Lookalike domain
+- Failed SPF authentication
+- Failed DMARC authentication
+- No DKIM signature
+- Suspicious verification URL
+- Urgent language
+- Account restriction threat
+- Potential credential harvesting
+
+5. INDICATORS OF COMPROMISE
+
+Sender:
+security-alert@micros0ft-support.com
+
+Reply-To:
+security-verification@micros0ft-support.com
+
+Domain:
+micros0ft-support.com
+
+URL:
+https://micros0ft-support.com/verify
+
+IP Address:
+Not identified
+
+File Hash:
+Not identified
+
+6. MITRE ATT&CK MAPPING
+
+T1566.002 - Phishing: Spearphishing Link
+
+The email uses a suspicious link to direct the recipient toward a potentially
+malicious verification page.
+
+T1583.001 - Acquire Infrastructure: Domains
+
+The scenario demonstrates the use of a suspicious lookalike domain for
+impersonation.
+
+7. SOC RESPONSE RECOMMENDATIONS
+
+1. Quarantine the phishing email.
+2. Block the identified domain and URL.
+3. Search email logs for other recipients.
+4. Determine whether the user clicked the URL.
+5. Check whether credentials were submitted.
+6. Reset credentials if compromise is suspected.
+7. Monitor the affected account for suspicious activity.
+
+8. FINAL ASSESSMENT
+
+The email is assessed as a phishing attempt with high confidence based on
+multiple correlated indicators.
+
+The strongest indicators are the Microsoft lookalike domain, failed SPF and
+DMARC authentication, suspicious verification URL, and social-engineering
+techniques.
+
+The investigation demonstrates a basic SOC L1 phishing email investigation
+workflow involving email analysis, header analysis, URL analysis, IOC
+extraction, threat intelligence, and incident documentation.
