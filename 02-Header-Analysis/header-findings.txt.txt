@@ -1,0 +1,38 @@
+PHISHING EMAIL INITIAL FINDINGS
+
+1. Suspicious Sender Domain
+   security-alert@micros0ft-support.com
+
+2. Lookalike Domain
+   "micros0ft" uses a zero instead of the letter "o".
+
+3. Suspicious URL
+   https://micros0ft-support.com/verify
+
+4. Urgency
+   The email threatens account restriction within 24 hours.
+
+5. Credential Harvesting Attempt
+   The recipient is instructed to verify their identity.
+
+Initial Assessment:
+The email contains multiple indicators consistent with a phishing attempt.
+Further header and URL analysis is required before assigning the final verdict.
+
+HEADER ANALYSIS
+
+SPF: FAIL
+DKIM: NONE
+DMARC: FAIL
+
+Reply-To:
+security-verification@micros0ft-support.com
+
+Return-Path:
+security-verification@micros0ft-support.com
+
+Finding:
+The simulated email fails SPF and DMARC authentication and does not contain a DKIM signature. The sender domain is also a Microsoft lookalike domain.
+
+Assessment:
+Header indicators increase confidence that the email is a phishing attempt.

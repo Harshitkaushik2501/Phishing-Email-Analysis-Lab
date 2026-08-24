@@ -1,0 +1,26 @@
+IOC EXTRACTION
+
+1. Sender Email
+security-alert@micros0ft-support.com
+
+2. Reply-To Email
+security-verification@micros0ft-support.com
+
+3. Suspicious Domain
+micros0ft-support.com
+
+4. Suspicious URL
+https://micros0ft-support.com/verify
+
+5. IP Address
+Not identified
+
+6. File Hash
+Not identified
+
+IOC Assessment
+
+The investigation identified a suspicious sender address, reply-to address,
+lookalike domain, and suspicious URL.
+
+No IP address or file hash was identified from the available email evidence.

@@ -1,0 +1,99 @@
+PHISHING EMAIL INVESTIGATION
+
+Investigation Type:
+Phishing Email Analysis
+
+Alert:
+User reported a suspicious Microsoft account security email.
+
+Initial Observation
+
+The email claims to be from Microsoft Security and asks the recipient to
+verify their identity because of unusual sign-in activity.
+
+Key Findings
+
+1. Sender Analysis
+
+Sender:
+security-alert@micros0ft-support.com
+
+The sender uses a lookalike Microsoft domain. The domain contains "micros0ft"
+where the letter "o" has been replaced with the number "0".
+
+2. Header Analysis
+
+SPF: FAIL
+DKIM: NONE
+DMARC: FAIL
+
+These authentication results increase the likelihood that the sender is
+not legitimately authorized to send the message.
+
+3. URL Analysis
+
+URL:
+https://micros0ft-support.com/verify
+
+The URL uses the same lookalike domain and contains a "/verify" path that
+could be used to direct a user to a credential-harvesting page.
+
+The URL was not opened directly during the investigation.
+
+4. Threat Intelligence
+
+VirusTotal Result:
+0/92 security vendors flagged the domain as malicious.
+
+Although no vendors currently detected the domain, this does not prove that
+the domain is legitimate.
+
+5. Social Engineering Indicators
+
+- Urgent security warning
+- 24-hour deadline
+- Account restriction threat
+- Request to verify identity
+- Microsoft brand impersonation
+
+IOC Summary
+
+Sender:
+security-alert@micros0ft-support.com
+
+Reply-To:
+security-verification@micros0ft-support.com
+
+Domain:
+micros0ft-support.com
+
+URL:
+https://micros0ft-support.com/verify
+
+IP:
+Not identified
+
+File Hash:
+Not identified
+
+Final Verdict
+
+MALICIOUS / PHISHING
+
+Confidence:
+HIGH
+
+Reason
+
+The email contains multiple indicators of phishing, including Microsoft
+brand impersonation, a lookalike domain, failed SPF and DMARC authentication,
+a suspicious verification URL, and social-engineering techniques.
+
+Recommended SOC Actions
+
+1. Quarantine the email.
+2. Block the identified domain and URL.
+3. Search for other users who received the same email.
+4. Check whether the recipient clicked the URL or submitted credentials.
+5. Reset the user's credentials if compromise is suspected.
+6. Monitor the affected account for suspicious activity.

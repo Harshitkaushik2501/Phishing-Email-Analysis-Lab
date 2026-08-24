@@ -1,0 +1,19 @@
+From: Microsoft Security <security-alert@micros0ft-support.com>
+To: employee@company.local
+Subject: URGENT: Unusual Sign-In Activity Detected
+
+Microsoft Account Security
+
+We detected unusual sign-in activity on your Microsoft account.
+
+Time: August 24, 2026
+Location: Unknown
+Device: Windows
+
+To prevent your account from being temporarily restricted, please verify your identity immediately:
+
+https://micros0ft-support.com/verify
+
+If you do not verify your account within 24 hours, access to your account may be restricted.
+
+Microsoft Security Team

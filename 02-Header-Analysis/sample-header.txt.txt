@@ -1,0 +1,14 @@
+From: Microsoft Security <security-alert@micros0ft-support.com>
+To: employee@company.local
+Subject: URGENT: Unusual Sign-In Activity Detected
+Reply-To: security-verification@micros0ft-support.com
+
+Authentication-Results:
+spf=fail
+dkim=none
+dmarc=fail
+
+Received: from mail.micros0ft-support.com
+    by mail.company.local
+
+Return-Path: <security-verification@micros0ft-support.com>

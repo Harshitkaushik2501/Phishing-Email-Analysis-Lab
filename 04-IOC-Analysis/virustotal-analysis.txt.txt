@@ -1,0 +1,27 @@
+VIRUSTOTAL DOMAIN ANALYSIS
+
+IOC:
+micros0ft-support.com
+
+Source:
+VirusTotal
+
+Result:
+0/92 security vendors flagged the domain as malicious.
+The remaining vendors either returned Clean or Unrated.
+
+Assessment:
+VirusTotal did not identify the domain as malicious based on the available
+vendor detections. However, this does not establish that the domain is
+legitimate.
+
+Other Indicators:
+- Lookalike Microsoft domain
+- Suspicious sender
+- SPF failure
+- DMARC failure
+- Credential-verification theme
+
+Conclusion:
+The domain remains suspicious based on the combined phishing indicators,
+despite having no current VirusTotal detections.
